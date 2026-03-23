@@ -44,7 +44,6 @@ export default function RestaurantPermitMap() {
       .then((res) => res.json())
       .then((data) => {
         setCurrentYearData(data)
-        console.log(data)
       })
       .catch((err) => {
         console.error("Failed to fetch map data:", err)
@@ -154,7 +153,6 @@ export default function RestaurantPermitMap() {
         id="restaurant-map"
         center={[41.88, -87.62]}
         zoom={10}
-        style={{ height: "600px", width: "100%" }}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
